@@ -14,7 +14,7 @@ Proxy = function(target, handler) {
 	console.log(`Target:`);
 	console.log(target);
 	console.log(`Handler:`);
-	console.log(handler);
+	console.log(JSON.stringify(handler, null, 2));
 	proxy = new nativeProxy(target, handler);
 	interceptedProxyBool = true;
 	return proxy;
